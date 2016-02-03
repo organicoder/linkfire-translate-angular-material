@@ -25,6 +25,8 @@
 
   <body ng-app="starterApp" layout="row" ng-controller="UserController as ul" ng-cloak >
 
+<!-- START OF LEFT NAVBAR -->
+
     <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
         md-component-id="left"
         ng-click="ul.toggleList()" aria-label="Show User List"
@@ -45,10 +47,13 @@
 
       <md-button class="md-raised">Add new language</md-button>
 
-  </md-sidenav> <!-- END OF LEFT NAVBAR -->
+  </md-sidenav>
 
+<!-- END OF LEFT NAVBAR -->
 
   <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+<!-- START OF TOP NAVBAR -->
 
     <md-toolbar layout="row" class="md-whiteframe-z1">
       <md-button id="main" class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
@@ -56,6 +61,10 @@
       </md-button>
       <h3>Linkfire translate</h3>
     </md-toolbar>
+
+    <!-- END OF TOP NAVBAR -->
+
+    <!-- START OF CONTENT AREA -->
 
     <md-content flex id="content">
         <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
@@ -67,6 +76,8 @@
           <md-icon md-svg-icon="share"></md-icon>
         </md-button>
       </md-content>
+
+      <!-- END OF CONTENT AREA -->
 
   </div>
 
