@@ -44,14 +44,6 @@
     }
 
     /**
-     * Select the current avatars
-     * @param menuId
-     */
-    function selectTranslation ( user ) {
-      self.selected = angular.isNumber(user) ? $scope.users[user] : user;
-    }
-
-    /**
      * Show the Contact view in the bottom sheet
      */
     function makeContact(selectedTranslation) {
