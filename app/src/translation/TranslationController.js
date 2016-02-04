@@ -1,7 +1,7 @@
 (function(){
 
   angular
-       .module('translation')
+       .module('translations')
        .controller('TranslationController', [
           'translationService', '$mdSidenav', '$mdBottomSheet', '$log', '$q',
           TranslationController
