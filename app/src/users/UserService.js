@@ -16,7 +16,7 @@
     var users = [
       {
         name: 'Default (English)',
-        avatar: 'svg-1',
+        avatar: 'assets/worldflags/us.png',
         content: 'Test Test Test Test Test Test Test Test Test Test Test Test Test'
       },
       {

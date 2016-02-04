@@ -72,16 +72,27 @@
     <!-- START OF CONTENT AREA -->
 
     <md-content flex id="content">
- 
-   <md-list>
-        <md-list-item ng-repeat="it in ul.users">
-            
-              {{it.name}}
 
-              <input type="text">
-            
-        </md-list-item>
-      </md-list>
+
+    <div layout="row">
+
+      <div flex>
+          <md-list>
+            <md-list-item ng-repeat="it in ul.users">
+              {{it.name}}
+            </md-list-item>
+          </md-list>
+      </div>
+
+      <div flex>
+        <md-list>
+          <md-list-item ng-repeat="it in ul.users">
+            <input type="text">
+          </md-list-item>
+        </md-list>
+      </div>
+
+      </div>
 
         <md-button class="contact" md-no-ink ng-click="ul.makeContact(ul.selected)" aria-label="Share with {{ ul.selected.name }}">
           <md-tooltip>What would Google Translate do?</md-tooltip>
