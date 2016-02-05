@@ -1,19 +1,19 @@
 (function(){
   'use strict';
 
-  angular.module('users')
-         .service('userService', ['$q', UserService]);
+  angular.module('maindata')
+         .service('maindataService', ['$q', MaindataService]);
 
   /**
-   * Users DataService
+   * Main DataService
    * Uses embedded, hard-coded data model; acts asynchronously to simulate
    * remote data service call(s).
    *
    * @returns {{loadAll: Function}}
    * @constructor
    */
-  function UserService($q){
-    var users = [
+  function MaindataService($q){
+    var maindata = [
       {
         name: 'Default (English)',
         avatar: 'assets/worldflags/us.png',
@@ -63,9 +63,9 @@
 
     // Promise-based API
     return {
-      loadAllUsers : function() {
+      loadAllMaindata : function() {
         // Simulate async nature of real remote calls
-        return $q.when(users);
+        return $q.when(maindata);
       }
     };
   }

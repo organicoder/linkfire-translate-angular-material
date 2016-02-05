@@ -1,35 +1,35 @@
 (function(){
 
   angular
-       .module('users')
-       .controller('UserController', [
-          'userService', '$mdSidenav', '$mdBottomSheet', '$log', '$q',
-          UserController
+       .module('maindata')
+       .controller('MaindataController', [
+          'maindataService', '$mdSidenav', '$mdBottomSheet', '$log', '$q',
+          MaindataController
        ]);
 
   /**
-   * Main Controller for the Angular Material Starter App
+   * Main Controller for the Linkfire Translation App
    * @param $scope
    * @param $mdSidenav
    * @param avatarsService
    * @constructor
    */
-  function UserController( userService, $mdSidenav, $mdBottomSheet, $log) {
+  function MaindataController( maindataService, $mdSidenav, $mdBottomSheet, $log) {
     var self = this;
 
     self.selected     = null;
-    self.users        = [ ];
+    self.maindata     = [ ];
     self.selectUser   = selectUser;
     self.toggleList   = toggleUsersList;
     self.makeContact  = makeContact;
 
-    // Load all registered users
+    // Load all maindata
 
-    userService
-          .loadAllUsers()
-          .then( function( users ) {
-            self.users    = [].concat(users);
-            self.selected = users[0];
+    maindataService
+          .loadAllMaindata()
+          .then( function( maindata ) {
+            self.maindata    = [].concat(maindata);
+            self.selected = maindata[0];
           });
 
     // *********************************
@@ -47,8 +47,8 @@
      * Select the current avatars
      * @param menuId
      */
-    function selectUser ( user ) {
-      self.selected = angular.isNumber(user) ? $scope.users[user] : user;
+    function selectUser ( maindata ) {
+      self.selected = angular.isNumber(maindata) ? $scope.users[maindata] : maindata;
     }
 
     /**
@@ -58,25 +58,25 @@
 
         $mdBottomSheet.show({
           controllerAs  : "cp",
-          templateUrl   : './src/users/view/contactSheet.html',
-          controller    : [ '$mdBottomSheet', ContactSheetController],
+          templateUrl   : './src/maindata/view/googletranslate.html',
+          controller    : [ '$mdBottomSheet', GoogleTranslateController],
           parent        : angular.element(document.getElementById('content'))
         }).then(function(clickedItem) {
           $log.debug( clickedItem.name + ' clicked!');
         });
 
         /**
-         * User ContactSheet controller
+         * Google translate controller
          */
-        function ContactSheetController( $mdBottomSheet ) {
-          this.user = selectedUser;
+        function GoogleTranslateController( $mdBottomSheet ) {
+          this.maindata = selectedUser;
           this.actions = [
             { name: 'Phone'       , icon: 'phone'       , icon_url: 'assets/svg/phone.svg'},
             { name: 'Twitter'     , icon: 'twitter'     , icon_url: 'assets/svg/twitter.svg'},
             { name: 'Google+'     , icon: 'google_plus' , icon_url: 'assets/svg/google_plus.svg'},
             { name: 'Hangout'     , icon: 'hangouts'    , icon_url: 'assets/svg/hangouts.svg'}
           ];
-          this.contactUser = function(action) {
+          this.googleTranslate = function(action) {
             // The actually contact process has not been implemented...
             // so just hide the bottomSheet
 
