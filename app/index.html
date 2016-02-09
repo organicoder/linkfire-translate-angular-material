@@ -73,10 +73,12 @@
 
     <!-- START OF CONTENT AREA -->
 
+    <div ng-controller="TranslationController as translationCtrl">
+
     <md-content flex id="content">
 
 
-    <div layout="row" ng-repeat="it in maindataCtrl.maindata">
+    <div layout="row" ng-repeat="it in translationCtrl.translations" >
 
       <div flex>
           <md-list>
@@ -92,9 +94,10 @@
             <input type="text">
           </md-list-item>
         </md-list>
-      </div>
 
       </div>
+
+    </div>
 
         <md-button class="contact" md-no-ink ng-click="maindataCtrl.makeContact(maindataCtrl.selected)">
 
@@ -103,8 +106,16 @@
         </md-button>
 
       </md-content>
-
+    </div>
       <!-- END OF CONTENT AREA -->
+
+    <div flex="20">
+
+        <md-button ng-click="test('console.log(\'pushed\');')" class="md-raised" aria-label="Submit your translations">Submit translations
+        <md-tooltip>Submit your translations</md-tooltip>
+      </md-button>
+
+    </div>
 
   </div>
 

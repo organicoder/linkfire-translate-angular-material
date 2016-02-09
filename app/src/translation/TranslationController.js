@@ -18,8 +18,7 @@
     var self = this;
 
     self.selected     = null;
-    self.translations        = [ ];
-    self.selectTranslation   = selectTranslation;
+    self.translations = [ ];
     self.toggleList   = toggleUsersList;
     self.makeContact  = makeContact;
 
@@ -27,14 +26,15 @@
 
     translationService
           .loadAllTranslations()
-          .then( function( translation ) {
-            self.translation    = [].concat(translation);
-            self.selected = translation[0];
+          .then( function( translations ) {
+            self.translations    = [].concat(translations);
+            self.selected = translations[0];
           });
 
     // *********************************
     // Internal methods
     // *********************************
+
 
     /**
      * Hide or Show the 'left' sideNav area

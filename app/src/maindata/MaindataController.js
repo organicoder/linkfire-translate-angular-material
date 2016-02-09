@@ -36,6 +36,15 @@
     // Internal methods
     // *********************************
 
+
+    /**
+     * Test button clicks
+     */
+
+     function testButton(){
+      console.log();
+     };
+
     /**
      * Hide or Show the 'left' sideNav area
      */
