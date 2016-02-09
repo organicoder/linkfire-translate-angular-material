@@ -15,19 +15,19 @@
   function TranslationService($q){
     var translations = [
       {
-        name: 'Feeds'
+        language: 'Feeds'
       },
       {
-        name: 'Links'
+        language: 'Links'
       },
       {
-        name: 'Artists'
+        language: 'Artists'
       },
       {
-        name: 'Tags'
+        language: 'Tags'
       },
       {
-        name: 'People'
+        language: 'People'
       }
       ];
 
