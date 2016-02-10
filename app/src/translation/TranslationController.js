@@ -14,12 +14,11 @@
    * @param avatarsService
    * @constructor
    */
-  function TranslationController( translationService, $mdSidenav, $mdBottomSheet, $log) {
+  function TranslationController( translationService, $mdSidenav, $mdBottomSheet, $log, $scope) {
     var self = this;
 
     self.selected     = null;
-    self.translations        = [ ];
-    self.selectTranslation   = selectTranslation;
+    self.translations = [ ];
     self.toggleList   = toggleUsersList;
     self.makeContact  = makeContact;
 
@@ -27,14 +26,26 @@
 
     translationService
           .loadAllTranslations()
-          .then( function( translation ) {
-            self.translation    = [].concat(translation);
-            self.selected = translation[0];
+          .then( function( translations ) {
+            self.translations    = [].concat(translations);
+            self.selected = translations[0];
           });
 
     // *********************************
     // Internal methods
     // *********************************
+
+    /**
+     * Test button clicks
+     */
+
+
+     //Method 1
+     $scope.testButton = function() {
+    
+    console.log('Button was clicked!!!');
+
+      }
 
     /**
      * Hide or Show the 'left' sideNav area
@@ -50,7 +61,7 @@
 
         $mdBottomSheet.show({
           controllerAs  : "cp",
-          templateUrl   : './src/users/view/contactSheet.html',
+          templateUrl   : './src/maindata/view/googletranslate.html',
           controller    : [ '$mdBottomSheet', ContactSheetController],
           parent        : angular.element(document.getElementById('content'))
         }).then(function(clickedItem) {

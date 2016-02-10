@@ -3,7 +3,7 @@ angular
       .config(function($mdThemingProvider, $mdIconProvider){
 
           $mdIconProvider
-              .defaultIconSet("./assets/svg/avatars.svg", 128)
+              .defaultIconSet("./assets/svg/flags.svg", 128)
               .icon("menu"       , "./assets/svg/menu.svg"        , 24)
               .icon("share"      , "./assets/svg/share.svg"       , 24)
               .icon("question"   , "./assets/svg/question.svg"    , 24)
