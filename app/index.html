@@ -75,10 +75,11 @@
 
     <div ng-controller="TranslationController as translationCtrl">
 
-    <md-content flex id="content">
+    <md-content flex id="content" class="section-box">
 
+    <section>
 
-    <div layout="row" ng-repeat="it in translationCtrl.translations" >
+    <div layout="row" ng-repeat="it in translationCtrl.translations">
 
       <div flex>
           <md-list>
@@ -99,6 +100,17 @@
 
     </div>
 
+          <div flex="20">
+
+        <md-button class="md-raised" ng-click="testButton()" aria-label="Submit your translations">Submit translations
+        <md-tooltip>Submit your translations</md-tooltip>
+      </md-button>
+
+    </div>
+
+    </section>
+
+
         <md-button class="contact" md-no-ink ng-click="maindataCtrl.makeContact(maindataCtrl.selected)">
 
           <md-tooltip>What would Google Translate do?</md-tooltip>
@@ -109,13 +121,7 @@
     </div>
       <!-- END OF CONTENT AREA -->
 
-    <div flex="20">
 
-        <md-button class="md-raised" aria-label="Submit your translations">Submit translations
-        <md-tooltip>Submit your translations</md-tooltip>
-      </md-button>
-
-    </div>
 
   </div>
 

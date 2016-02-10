@@ -14,7 +14,7 @@
    * @param avatarsService
    * @constructor
    */
-  function TranslationController( translationService, $mdSidenav, $mdBottomSheet, $log) {
+  function TranslationController( translationService, $mdSidenav, $mdBottomSheet, $log, $scope) {
     var self = this;
 
     self.selected     = null;
@@ -35,6 +35,17 @@
     // Internal methods
     // *********************************
 
+    /**
+     * Test button clicks
+     */
+
+
+     //Method 1
+     $scope.testButton = function() {
+    
+    console.log('Button was clicked!!!');
+
+      }
 
     /**
      * Hide or Show the 'left' sideNav area

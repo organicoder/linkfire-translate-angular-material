@@ -14,7 +14,7 @@
    * @param avatarsService
    * @constructor
    */
-  function MaindataController( maindataService, $mdSidenav, $mdBottomSheet, $log) {
+  function MaindataController( maindataService, $mdSidenav, $mdBottomSheet, $log, $scope) {
     var self = this;
 
     self.selected     = null;
@@ -41,9 +41,12 @@
      * Test button clicks
      */
 
-     function testButton(){
-      console.log();
-     };
+
+     $scope.testButton = function() {
+    
+    console.log('Button was clicked!!!');
+
+      }
 
     /**
      * Hide or Show the 'left' sideNav area
