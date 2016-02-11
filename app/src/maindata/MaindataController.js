@@ -37,16 +37,6 @@
     // *********************************
 
 
-    /**
-     * Test button clicks
-     */
-
-
-     $scope.testButton = function() {
-    
-    console.log('Button was clicked!!!');
-
-      }
 
     /**
      * Hide or Show the 'left' sideNav area

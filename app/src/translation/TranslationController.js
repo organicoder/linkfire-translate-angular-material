@@ -41,7 +41,7 @@
 
 
      //Method 1
-     $scope.testButton = function() {
+     self.testButton = function() {
     
     console.log('Button was clicked!!!');
 
