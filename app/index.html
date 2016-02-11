@@ -73,13 +73,15 @@
 
     <!-- START OF CONTENT AREA -->
 
+ <section class="card">
+
+    <div class="textintro">
+            <h1>"Headline for this section"</h1>
+    </div>
+
     <div ng-controller="TranslationController as translationCtrl">
 
-
     <md-content flex id="content">
-
-
-    <section>
 
     <div layout="row" ng-repeat="it in translationCtrl.translations">
 
@@ -102,24 +104,26 @@
 
     </div>
 
-          <div flex="20">
+        
 
-        <md-button class="md-raised" ng-click="translationCtrl.testButton()" aria-label="Submit your translations">Submit translations
+        <md-button class="md-raised submit-trans-btn" ng-click="translationCtrl.testButton()" aria-label="Submit your translations">Submit translations
         <md-tooltip>Submit your translations</md-tooltip>
       </md-button>
 
-    </div>
-
     </section>
 
+    
 
-        <md-button class="contact" md-no-ink ng-click="maindataCtrl.makeContact(maindataCtrl.selected)">
+        
+      </md-content> 
+
+<!-- 
+      <md-button class="contact" md-no-ink ng-click="maindataCtrl.makeContact(maindataCtrl.selected)">
 
           <md-tooltip>What would Google Translate do?</md-tooltip>
           <md-icon md-svg-icon="question"></md-icon>
-        </md-button>
+        </md-button>  -->
 
-      </md-content>
     </div>
       <!-- END OF CONTENT AREA -->
 
