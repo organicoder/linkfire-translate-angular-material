@@ -31,6 +31,56 @@
       }
       ];
 
+    var pages = [
+      {
+        title: 'Board settings',
+        sections: [
+          {
+            headline: 'General',
+            ids : {
+            coverImage: 'Cover image',
+            boardName: 'Board name',
+            shortName: 'Short domains',
+            useCustomDomain:'Use custom domain?',
+            getInTouch:'Get in touch',
+            addShortDomain:'Add short dommain',
+            leaveBoard:'Leave board'}
+          }
+          ,{
+            headline: 'User management',
+            ids : {
+              userDetails:'User details',
+              inviteUser: 'Invite user'
+            }
+          },
+          {
+            headline: 'Service',
+            ids : {
+
+            }
+          },
+          {
+            headline: 'Channels',
+          },
+          {
+            headline: 'Retargeting',
+          },
+        ]
+      },
+      {
+        title: 'Edit link'
+      },
+      {
+        title: 'Artists'
+      },
+      {
+        title: 'Tags'
+      },
+      {
+        title: 'People'
+      }
+      ];
+
 
     // Promise-based API
     return {
