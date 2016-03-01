@@ -1,10 +1,10 @@
-(function(){
+(function() {
 
   angular
        .module('translations')
        .controller('TranslationController', [
           'translationService', '$mdSidenav', '$mdBottomSheet', '$log', '$q',
-          TranslationController
+          TranslationController,
        ]);
 
   /**
@@ -14,7 +14,8 @@
    * @param avatarsService
    * @constructor
    */
-  function TranslationController( translationService, $mdSidenav, $mdBottomSheet, $log, $scope) {
+
+  function TranslationController(translationService, $mdSidenav, $mdBottomSheet, $log, $scope) {
     var self = this;
 
     self.selected     = null;
@@ -22,12 +23,12 @@
     self.toggleList   = toggleUsersList;
     self.makeContact  = makeContact;
 
-    // Load all translations
-
+    // Load translations
     translationService
           .loadAllTranslations()
-          .then( function( translations ) {
-            self.translations    = [].concat(translations);
+          .then(function(translations) {
+            self.translations = [].concat(translations);
+            console.log('loaded translations', translations);
             self.selected = translations[0];
           });
 
@@ -39,13 +40,10 @@
      * Test button clicks
      */
 
-
-     //Method 1
-     self.testButton = function() {
-    
-    console.log('Button was clicked!!!');
-
-      }
+    //Method 1
+    self.testButton = function() {
+      console.log('Button was clicked!!!');
+    };
 
     /**
      * Hide or Show the 'left' sideNav area
